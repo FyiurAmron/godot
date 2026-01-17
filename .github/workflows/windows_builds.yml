@@ -24,13 +24,14 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - name: Editor (target=editor)
+          - name: Editor w/ Mono (target=editor)
             cache-name: windows-editor
             target: editor
             scons-flags: >-
               windows_subsystem=console
               vsproj=yes
               vsproj_gen_only=no
+              module_mono_enabled=yes
             bin: ./bin/godot.windows.editor.x86_64.exe
             compiler: msvc
 
